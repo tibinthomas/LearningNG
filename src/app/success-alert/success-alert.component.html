@@ -10,8 +10,11 @@
 <!--any non-multiline or non-block expression that finally resolves to a dtring can be used here-->
 <!--any eg : ternaryy expression, functions, strings etc-->
 
-<button class="btn btn-primary" [disabled] = "!allowNewServer">Add server</button>
+<button class="btn btn-primary" [disabled] = "!allowNewServer" (click) ="onServerAdd()">Add server</button>
+<p>{{serverCreationStatus}}</p>
 
 
 <!--String interplation with property binding-->
 <p [innerText] = allowNewServer></p>
+
+<input type="text" (input)="onUpdateservername($event)">

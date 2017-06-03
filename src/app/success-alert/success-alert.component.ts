@@ -13,8 +13,19 @@ export class SuccessAlertComponent implements OnInit {
 
   serverId: number = 174;
   serverStatus: string = 'offline';
+  serverCreationStatus: string = "No server was created";
+  serverName: string;
 
   allowNewServer: boolean = false;
+
+  onServerAdd() {
+    this.serverCreationStatus = "Server, " +  this.serverName + " created successfully";
+  }
+
+  onUpdateservername(event: Event) {
+    //console.log(event);
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
 
 
 
