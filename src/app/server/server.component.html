@@ -1,1 +1,15 @@
-<h1>server component running here</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+            <label for="belowTextBox"></label>
+            <input type="text" id="belowTextBox" (input) = "onGetInput($event)">
+            <button (click) = "onAddServer()">Add Server</button>
+            <p *ngIf = "serverCreatedStatus===true"> Server is created. Srver name is {{serverName}}</p>
+            <ul class="list-group">
+                <li *ngFor = "let server of serverList" class="list-group-item">{{server}}</li>
+            </ul>
+            
+        </div>
+    </div>
+</div>

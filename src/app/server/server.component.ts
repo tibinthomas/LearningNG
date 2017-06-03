@@ -6,7 +6,19 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ServerComponent implements OnInit {
+    serverName = '';
+    serverList = [];
+    serverCreatedStatus = false;
     constructor() { }
+
+    onGetInput(event: Event) {
+        this.serverName = (<HTMLInputElement>event.target).value;
+    }
+
+    onAddServer() {
+        this.serverList.push(this.serverName);
+        this.serverCreatedStatus = true;
+    }
 
     ngOnInit() { }
 }
