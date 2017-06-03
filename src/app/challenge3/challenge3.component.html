@@ -1,0 +1,9 @@
+<hr>
+<button class="btn btn-primary" (click) = "onButtonClick()">Display Details</button>
+<label *ngIf="toggle==true"> I like Angular </label>
+<p 
+    *ngFor="let log of buttonClicks"
+    [ngStyle] = "{backgroundColor : log >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': log >= 5}">
+        {{log}}
+</p>
