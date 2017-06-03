@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 
   templateUrl: './app.component.html', 
 
-  template: `
-          <h1>This is App Component running here from the ts file</h1>
-  `,                                      //preference is given to this
+  // template: `
+  //         <h1>This is App Component running here from the ts file</h1>
+  // `,                                      //preference is given to this
 
 
   styleUrls: ['./app.component.css'],     //Can add any no. of external css files 
