@@ -4,7 +4,10 @@
       <hr>
       <label>User Name</label>
       <input type="text" [(ngModel)]="userName">
+      <p *ngIf="userName===''; else gotName">What is your name ?</p>
+      <ng-template #gotName>
       <p>Hello {{userName}}</p>
+      </ng-template>
       <button class="btn btn-primary" [disabled]="userName===''" (click)="userName=''">Reset Text</button>
     </div>
   </div>
