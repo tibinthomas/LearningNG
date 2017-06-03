@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Challenge2Component implements OnInit {
 
-  constructor() { }
+  userName = '';
+  luckeyOrNot: boolean;
 
-  userName: string = '';
+  constructor() {
+    this.luckeyOrNot = Math.random() > 0.5 ? true : false;
+  }
+
+  isLucky() {
+    return this.luckeyOrNot === true ? 'green' : 'black';
+  }
+
   ngOnInit() {
   }
 
