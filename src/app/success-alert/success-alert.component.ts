@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessAlertComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {this.allowNewServer=true;},2000)
+   }
 
   serverId: number = 174;
   serverStatus: string = 'offline';
+
+  allowNewServer: boolean = false;
+
+
 
   getServerStatus() {
     return this.serverStatus;

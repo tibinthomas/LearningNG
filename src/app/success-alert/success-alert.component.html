@@ -9,3 +9,9 @@
 <p>Server status is {{getServerStatus()}}</p>
 <!--any non-multiline or non-block expression that finally resolves to a dtring can be used here-->
 <!--any eg : ternaryy expression, functions, strings etc-->
+
+<button class="btn btn-primary" [disabled] = "!allowNewServer">Add server</button>
+
+
+<!--String interplation with property binding-->
+<p [innerText] = allowNewServer></p>
