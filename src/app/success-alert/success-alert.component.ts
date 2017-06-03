@@ -9,6 +9,12 @@ export class SuccessAlertComponent implements OnInit {
 
   constructor() { }
 
+  serverId: number = 174;
+  serverStatus: string = 'offline';
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
   ngOnInit() {
   }
 
