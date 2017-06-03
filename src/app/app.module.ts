@@ -8,13 +8,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { Challenge2Component } from './challenge2/challenge2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     WarningAlertComponent,
-    SuccessAlertComponent
+    SuccessAlertComponent,
+    Challenge2Component
   ],
   imports: [
     BrowserModule,
